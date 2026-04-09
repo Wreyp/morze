@@ -10,7 +10,7 @@ import (
 )
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	htmlContent, err := os.ReadFile("../index.html")
+	htmlContent, err := os.ReadFile("/index.html")
 	if err != nil {
 		http.Error(w, "fail to read index", http.StatusInternalServerError)
 		return
